@@ -67,6 +67,7 @@ To begin set-up the dependancies required for the task at hand. These are standa
 - Select the most active station in terms of observations made (Waikiki was the result)
 - Retrieve the last 12 months of temperature observation data from the most active site
 - Plot the results as a histogram with bins=12
+
 ![Waikiki Weather Station Temperature Observations](https://github.com/SJLimburg/sql-alchemy-challenge/blob/main/Waikiki%20Weather%20Station%20Temperature%20Observations.png)
 
 
