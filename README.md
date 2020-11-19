@@ -80,7 +80,7 @@ To begin set-up the dependancies required for the task at hand. These are standa
 
         app = Flask(__name__)
  
- **Setup routes as defined in instructions**
+ **Setup routes as defined in instructions and return Jsonified data to the user**
  
          @app.route("/")
         def welcome():
@@ -99,5 +99,7 @@ To begin set-up the dependancies required for the task at hand. These are standa
                 f"/api/v1.0/temp/start/end"
             )
 
+##### Complete code can be found in app.py files
 
+# Bonus data can be found in the Jupyter Notebook as well
 
