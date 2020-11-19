@@ -4,7 +4,7 @@ Climate analysis of Hawaii using sqlalchemy to access sqlite and Matplotlib and 
 
 ### Step 1 - Climate Analysis and Exploration - SQLAlchemy ORM queries, Pandas, and Matplotlib - (Hawaii_climate_analysis.ipynb)
 
-Some items were given to set-up the dependancies required for the task at hand:
+To begin set-up the dependancies required for the task at hand. These are standard libraries used in data analysis:
 
 ##### matplotlib libraries 
 
@@ -27,3 +27,21 @@ Some items were given to set-up the dependancies required for the task at hand:
     from sqlalchemy.ext.automap import automap_base
     from sqlalchemy.orm import Session
     from sqlalchemy import create_engine, func, inspect, desc
+    
+##### Now to set up for a series of queries using session objects
+    
+**set up engine for sqlite database stored in the Resources folder**
+        engine = create_engine("sqlite:///Resources/hawaii.sqlite",echo=False)
+        
+**Reflect an existing database into a new model**
+        Base = automap_base()
+        
+**Reflect the tables**
+        Base.prepare(engine, reflect=True) 
+        
+**Save references to each table in the sqlite DB that we want to access**
+        Meas = Base.classes.measurement
+        Sta = Base.classes.station
+        
+
+        
