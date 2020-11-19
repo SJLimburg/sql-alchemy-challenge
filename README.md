@@ -70,6 +70,34 @@ To begin set-up the dependancies required for the task at hand. These are standa
 
 ![Waikiki Weather Station Temperature Observations](https://github.com/SJLimburg/sql-alchemy-challenge/blob/main/Waikiki%20Weather%20Station%20Temperature%20Observations.png)
 
+### Step 2 - Climate App - Sdesign a Flask API based on the queries just developed (app.py)
+
+**Import flask and jsonify libraries**
+
+        from flask import Flask, jsonify
+
+**Set-up Flask to create the APIs for the climate app**
+
+        app = Flask(__name__)
+ 
+ **Setup routes as defined in instructions**
+ 
+         @app.route("/")
+        def welcome():
+            """List all Available API routes - these routes were defined in the instructions"""
+            return (
+                f"Plan your trip to  Hawaii using this Climate Analysis API!<br/>\
+                Note: To look at temps please specify start and end date as yyyy-mm-dd<br/>\
+                Dates must be between 2010-01-01 and 2017-08-23<br/>\
+                Query returns Min, Avg, Max  <br/>\
+                    <br/>"
+                f"Available Pages:<br/>"
+                f"/api/v1.0/precipitation<br/>"
+                f"/api/v1.0/stations<br/>"
+                f"/api/v1.0/tobs<br/>"
+                f"/api/v1.0/temp/start<br/>"
+                f"/api/v1.0/temp/start/end"
+            )
 
 
-        
+
