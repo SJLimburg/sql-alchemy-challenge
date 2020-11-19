@@ -34,6 +34,9 @@ To begin set-up the dependancies required for the task at hand. These are standa
         
         engine = create_engine("sqlite:///Resources/hawaii.sqlite",echo=False)
         
+        
+        
+        
 **Reflect an existing database into a new model**
         
         Base = automap_base()
@@ -49,10 +52,23 @@ To begin set-up the dependancies required for the task at hand. These are standa
         
 ##### After the set-up is created session queries were run 
 
+-**Precipitation**
 - Precipitation data for the 12 month period ending 2017-8-23
 - Dates and rainfall amounts selected
 - The values were sorted by date in a Pandas dataframe
 - A plot was created using Matplotlib
+- Pandas was used to generate summary statistics
 
 ![Hawaii Rainfall 2016-2017 season ](https://github.com/SJLimburg/sql-alchemy-challenge/blob/main/Rain%20in%20Hawaii%202016-2017%20season%20-%20homework.png)
+
+-**Weather Stations**
+- Calculated the total number of stations
+- List the stations and observation counts in descending order (tobs)
+- Select the most active station in terms of observations made (Waikiki was the result)
+- Retrieve the last 12 months of temperature observation data from the most active site
+- Plot the results as a histogram with bins=12
+![Waikiki Weather Station Temperature Observations](https://github.com/SJLimburg/sql-alchemy-challenge/blob/main/Waikiki%20Weather%20Station%20Temperature%20Observations.png)
+
+
+
         
